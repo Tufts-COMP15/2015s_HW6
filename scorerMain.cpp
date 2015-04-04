@@ -2,9 +2,6 @@
 #include "BogScorer.h"
 using namespace std;
 
-//@@
-//@@ this file was not provided.  I added it
-//@@
 int main()
 {
 	BogScorer	s;
