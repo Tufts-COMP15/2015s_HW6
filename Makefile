@@ -12,25 +12,22 @@ all: scorerMain.cpp solverMain.cpp checkerMain.cpp \
 
 	${CXX} ${FLAGS} -o bbscorer BogScorer.cpp scorerMain.cpp
 	${CXX} ${FLAGS} -o bbsolver BogSolver.cpp solverMain.cpp \
-				Dictionary.cpp Node.cpp solver.cpp
+				Dictionary.cpp Node.cpp 
 	${CXX} ${FLAGS} -o bbchecker BogValidator.cpp checkerMain.cpp \
-				Dictionary.cpp Node.cpp solver.cpp
+				Dictionary.cpp Node.cpp
 
-bbscorer: scorerMain.cpp BogScorer.cpp BogScorer.h
+bbscorer: scorerMain.cpp BogScorer.cpp BogScorer.h 
 	${CXX} ${FLAGS} -o bbscorer BogScorer.cpp scorerMain.cpp
-
+	
 bbsolver: solverMain.cpp BogSolver.cpp BogSolver.h
 	${CXX} ${FLAGS} -o bbsolver BogSolver.cpp solverMain.cpp \
 				Dictionary.cpp Node.cpp
-
-bbchecker: checkerMain.cpp BogValidator.cpp BogValidator.h \
-				Dictionary.cpp Dictionary.h \
-				Node.cpp Node.h
-	${CXX} ${FLAGS} -o bbchecker BogValidator.cpp checkerMain.cpp \
-				Dictionary.cpp Node.cpp
-
+	
+bbchecker: checkerMain.cpp BogValidator.cpp BogValidator.h
+	${CXX} ${FLAGS} -o bbchecker BogValidator.cpp checkerMain.cpp
+		
 clean:
-	rm -f bbscorer bbsolver bbchecker
+	rm -f bbscorer bbsolver bbchecker 
 
 make provide:
 	provide comp15 hw6 scorerMain.cpp solverMain.cpp checkerMain.cpp \
@@ -39,3 +36,4 @@ make provide:
 		BogValidator.cpp BogValidator.h \
 		Dictionary.h Dictionary.cpp Node.h Node.cpp \
 	        ReadMe.md Makefile
+
