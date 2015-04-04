@@ -10,10 +10,8 @@ int main()
 {
 	BogSolver solver;
 
-	//solver.readDict();
-	solver.readDict("words.txt");
-	//solver.readBoard();
-	solver.readBoard("board.txt");
+	solver.readDict();
+	solver.readBoard();
 	cout << "About to solve...\n";
 	solver.solve();
 	solver.printWords();
