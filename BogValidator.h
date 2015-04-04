@@ -11,7 +11,8 @@ public:
 	bool readDict(); // read in a dictionary
 	bool readBoard(); // read in a board
 	bool isValid(std::string s); // validates one word
-	void checkWords(); // validates cin
+	void checkWords(); // validates cin. The end of input will
+			   // simply return NULL to cin.
 private:
 	Dictionary dict; // must use a Dictionary
 };
