@@ -2,8 +2,6 @@
 #include "BogValidator.h"
 using namespace std;
 
-#include "BogValidator.h"
-
 int main()
 {
 	BogValidator v;
